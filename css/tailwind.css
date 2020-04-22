@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Card CSS.
+ */
+
+ .card {
+    margin: 0.5rem;
+    margin-top: 1.5rem;
+    overflow: hidden;
+    background-color: #fff;
+    border-width: 1px;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .card:hover {
+    --transform-scale-x: .5;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  
+  .card-content-description {
+    height: 0;
+    padding-top: 0.5rem;
+    opacity: 0;
+    transition-property: all;
+    transition-duration: 200ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .card:hover > .card-content > .card-content-description {
+    height: 100%;
+    max-height: 100%;
+    opacity: 1;
+  }
+  
+  .read-more {
+    height: 100%;
+    max-height: 100%;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #9f7aea;
+    text-decoration: underline;
+    text-transform: uppercase;
+    opacity: 1;
+    transition-property: all;
+  }
+  
+  .card:hover > .card-content > .read-more {
+    opacity: 0;
+    height: 0;
+  }
+  
